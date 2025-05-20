@@ -1,0 +1,6 @@
+@use './variables' as *;
+@import './reset';
+
+body {
+	background-color: $yellow;
+}
