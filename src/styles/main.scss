@@ -2,6 +2,8 @@
 @import './reset';
 
 body {
+	color: white;
+	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	background-color: $yellow;
 }
 
@@ -10,8 +12,4 @@ body {
 	width: 1400px;
 	max-width: 100%;
 	margin: 0 auto;
-
-	&--padding {
-		padding: 0 75px;
-	}
 }

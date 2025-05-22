@@ -1,0 +1,31 @@
+@use '/src/styles/variables' as *;
+
+.header {
+	&__container {
+		margin-top: 59px;
+		height: 318px;
+		padding: 0 75px;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__locations-button {
+		font-size: $lg;
+		margin-bottom: 40px;
+	}
+
+	&__weather-condition {
+		font-size: $xlg;
+		flex: 1;
+	}
+
+	&__weather-temp {
+		font-size: $max;
+		margin-bottom: 10px;
+	}
+}
