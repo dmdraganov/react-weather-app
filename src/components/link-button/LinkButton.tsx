@@ -1,6 +1,11 @@
+import type { ReactNode } from 'react';
 import styles from './LinkButton.module.scss';
 
-const LinkButton = ({ children, ...props }) => {
+interface IProps {
+	children: ReactNode;
+}
+
+const LinkButton = ({ children, ...props }: IProps) => {
 	return <button className={styles.button}>{children}</button>;
 };
 

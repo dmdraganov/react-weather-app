@@ -1,5 +1,7 @@
+import './DayForecast.scss';
+
 const DayForecast = () => {
-	return;
+	return <div></div>;
 };
 
 export default DayForecast;

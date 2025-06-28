@@ -5,6 +5,7 @@ body {
 	color: white;
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
 	background-color: $yellow;
+	height: 100vh;
 }
 
 .container {
@@ -12,4 +13,25 @@ body {
 	width: 1400px;
 	max-width: 100%;
 	margin: 0 auto;
+}
+
+.flex-container {
+	display: flex;
+
+	&--column {
+		flex-direction: column;
+	}
+
+	&--space-between {
+		justify-content: space-between;
+	}
+
+	&__flex-item {
+		flex: 1;
+	}
+}
+
+.division {
+	background-color: $light-yellow;
+	border-radius: 40px;
 }

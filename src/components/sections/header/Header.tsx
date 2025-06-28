@@ -1,8 +1,14 @@
-import { useState } from 'react';
 import './Header.scss';
 import { formatDate } from '../../../utilities/dateFormatter';
+import sprite from '/src/assets/icons/sprite.svg';
 
-const Header = ({ location, ...weatherData }) => {
+interface IProps {
+	location: string;
+	condition: string;
+	temp: number;
+}
+
+const Header = ({ location, condition, temp }: IProps) => {
 	const currentDate = new Date();
 	const [weekday, ...rest] = formatDate(currentDate);
 
@@ -16,17 +22,15 @@ const Header = ({ location, ...weatherData }) => {
 							{location}
 							<img src='./' alt='' />
 						</a>
-						<span className='header__weather-condition'>
-							{weatherData.condition.text}
-						</span>
-						<span className='header__weather-temp'>
-							{weatherData.temp} &deg;C
-						</span>
+						<span className='header__weather-condition'>{condition}</span>
+						<span className='header__weather-temp'>{temp} &deg;C</span>
 						<time dateTime={''}>
 							{weekday} | {rest.join(' ')}
 						</time>
 					</div>
-					<img src='' alt='' />
+					<svg>
+						<use xlinkHref={sprite + '#' + condition.replace(' ', '-')} />
+					</svg>
 				</div>
 			</div>
 		</header>

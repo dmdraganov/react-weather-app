@@ -1,4 +1,4 @@
-export const formatDate = (date, locale = 'en-US') => {
+export const formatDate = (date: Date, locale = 'en-US') => {
 	const dayName = date.toLocaleString(locale, {
 		weekday: 'long',
 	});
